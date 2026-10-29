@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:5093
+
+### OpenAPI document
+GET {{baseUrl}}/openapi/v1.json
+
+### Login with the development-only demo account
+# The IDE HTTP client should retain the authentication cookie for the requests below.
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@irisa.local",
+  "password": "IrisaDemo!2026"
+}
+
+### Current user
+GET {{baseUrl}}/api/auth/me
+
+### List synthetic source records
+GET {{baseUrl}}/api/demo/records
+
+### Search a synthetic person
+GET {{baseUrl}}/api/people/1111111111
+
+### Invalid national code
+GET {{baseUrl}}/api/people/123
+
+### A valid-format code that does not exist in the source
+GET {{baseUrl}}/api/people/9999999999
+
+### Logout
+POST {{baseUrl}}/api/auth/logout

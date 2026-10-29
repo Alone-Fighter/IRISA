@@ -1,0 +1,42 @@
+:root {
+  font-family: Tahoma, "Segoe UI", sans-serif;
+  color: #20333b;
+  background: #f5f8f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --teal: #0b827a;
+  --teal-dark: #096b65;
+  --ink: #20333b;
+  --muted: #71818a;
+  --border: #e2e9eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(11 130 122 / 35%);
+  outline-offset: 3px;
+}
+
+a {
+  text-decoration: none;
+}
